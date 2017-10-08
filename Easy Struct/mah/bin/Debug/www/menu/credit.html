@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+        <meta charset="utf-8" />   
+ 
+         <link rel="stylesheet" href="../style2	.css" />  
+        <title> EASY STRUCT | crédits </title>
+        
+  </head>
+
+
+     <body>
+       
+      <div class="Bare_etat">
+       
+        
+        
+
+              <div class="navigation">
+                       <a class="LienMenu" id="MenuPricipale">  Our team</a>
+                        
+                        <div class="logo" style="width: 220px; height: 230px; margin: auto; padding-top:10px;  ">  <img src="logo.png" > </div>
+                       
+                       <a class="LienLogin" id="buttonn">Contactez nous</a>
+              </div>
+
+
+<div class="Menu2" id="Pagelogin" >
+
+<a class="LienMenu" id="Quitterlogin"> Quitter</a>
+
+
+   <div class="fenetre_login" style="margin-top: 100px; ">
+        
+
+         <h1 style="text-align: center; color:white;">Nous contacter</h1>
+          <form <form method="post" action="i ndex.php">
+
+            <p>  <input type="text" placeholder=" Nom" name="maill" class="formIndex" />  </p>
+            <p>  <input type="text" placeholder=" Prenom" name="maill" class="formIndex" />  </p>
+            <p>  <input type="text" placeholder=" E-mail" name="maill" class="formIndex" />  </p>
+            <p>  <input type="text" placeholder=" Message"  name="maill" class="formIndex" style="width: 400px; height: 150px;" />  </p> 
+            <p style="margin:auto; width: 100px; ">  <input type="submit" value="submit" class="Index1_bouttonCommencez" style="width: 80px; height: 50px; color: blue;"></p>
+
+          </form>
+
+        </div>
+
+</div>
+
+
+       <div class="Menu2" id="PageMenu">
+
+        <a class="LienMenu" id="QuitterMenu"> Quitter</a>
+        <h1 style="width: 150px; margin: auto; font-family: arial; padding-top: 20px; color: white;">EQUIPE 7</h1>
+
+        <div style="min-width: 300px; max-width: 750px ; height: 500px; margin: auto; margin-top: 50px;">
+          
+          <div class="article1">
+                <img src="img/mehdi.jpg" width="100%" />
+                <h3>BOULGROUNE MEHDI ISMAIL</h3>           
+            </div><!-- .article -->
+
+            <div class="article1">
+                <img src="img/ihab.jpg" width="100%" />
+                <h3>IMAD IHAB EDINE</h3>           
+            </div><!-- .article -->
+
+            <div class="article1">
+                <img src="img/anis.jpg" width="100%" />
+                <h3>AMAR ANIS ZOUBIR</h3>           
+            </div><!-- .article -->
+
+             <div class="article1">
+                <img src="img/isra.jpg" width="100%" />
+                <h3>MEKKI ISRA ILHEM</h3>           
+            </div><!-- .article -->
+
+             <div class="article1">
+                <img src="img/doria.jpg" width="100%" />
+                <h3>RELIZANI DORIA</h3>           
+            </div><!-- .article -->
+
+             <div class="article1">
+                <img src="img/doria.jpg" width="100%" />
+                <h3>BOUAM MELLILA</h3>           
+            </div><!-- .article -->
+
+        </div>
+        
+
+      </div>
+
+
+</div> <!-- bar d'etat -->
+
+<script type="text/javascript">
+
+      var i=0.0;
+      
+      var Menupricipale=document.getElementById('MenuPricipale');
+      var PageMenu=document.getElementById('PageMenu');
+      var a=false;
+
+      Menupricipale.addEventListener('click',Interval,false);
+      QuitterMenu.addEventListener('click',SupprimerMenu,false);
+      
+      var j=0.0;
+      var Buttonn=document.getElementById('buttonn');
+      var Pagelogin=document.getElementById('Pagelogin');
+      var s=false;
+
+      Buttonn.addEventListener('click',Interval0,false);
+      Quitterlogin.addEventListener('click',SupprimerMenu0,false);
+
+
+
+
+      
+      
+      function Interval2 ()
+          {
+
+          if (!a)
+          {
+                a=true;
+                PageMenu.style.display='block';
+                PageMenu.style.opacity=0;
+          }
+          else
+          {
+                if (i<1.1)
+                {
+                  PageMenu.style.opacity=i;
+                  i+=0.01;
+                }
+                else
+                { clearInterval(b);}
+            
+          }
+        }
+
+     function  Interval() 
+    {
+      b=setInterval(Interval2,7);
+      a=false;
+      i=0.0;
+    }
+
+    function SupprimerMenu ()
+    {
+      PageMenu.style.display='none';
+    }
+
+
+
+
+
+
+      function Interval20 ()
+          {
+
+          if (!s)
+          {
+                s=true;
+                Pagelogin.style.display='block';
+                Pagelogin.style.opacity=0;
+          }
+          else
+          {
+                if (j<1.1)
+                {
+                  Pagelogin.style.opacity=j;
+                  j+=0.01;
+                }
+                else
+                { clearInterval(b);}
+            
+          }
+        }
+
+     function  Interval0() 
+    {
+      b=setInterval(Interval20,7);
+      s=false;
+      j=0.0;
+    }
+  function SupprimerMenu0 ()
+  {
+    Pagelogin.style.display='none';
+  }
+     
+
+      </script>
+
+     
+	  
+
+      <div class="page" style="margin: 100px;">
+      	<h1 style="font-family: arial; font-size: 36px; color: red; padding-top: 20px; border-bottom: 1px red solid; "> CREDITS :</h1>
+		  
+
+      </div>
+
+     </body>
+
+</html>

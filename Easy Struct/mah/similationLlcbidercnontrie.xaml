@@ -1,0 +1,448 @@
+﻿<Controls:MetroWindow
+    x:Class="mah.similationLlcbidercnontrie"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mah"
+         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+     mc:Ignorable="d"
+      
+                      
+                      Height="700"
+                      Width="1313.75"
+   GlowBrush="{DynamicResource AccentColorBrush}"
+                      EnableDWMDropShadow="True"
+                      ShowTitleBar="False"
+                     
+                      
+                     
+                      ResizeMode="CanMinimize"
+                      WindowTransitionsEnabled="True"
+                      WindowStartupLocation="CenterScreen"                    
+                      RenderOptions.ClearTypeHint="Enabled"
+                      TextOptions.TextFormattingMode="Display" Background="White" 
+                     
+                     
+                   
+     
+        
+      
+    
+        Title="similationLlcbidercnontrie" Icon="Logo_Final.ico" >
+    <Controls:MetroWindow.Resources>
+        <Style x:Key="zoom1" TargetType="{x:Type Button}">
+            <Setter Property="Controls:ControlsHelper.ContentCharacterCasing" Value="Upper"/>
+            <Setter Property="Controls:ControlsHelper.CornerRadius" Value="3"/>
+            <Setter Property="MinHeight" Value="25"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="{DynamicResource UpperCaseContentFontSize}"/>
+            <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}"/>
+            <Setter Property="Background" Value="{DynamicResource GrayBrush10}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource TextBoxBorderBrush}"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+            <Setter Property="Padding" Value="5,6"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Border x:Name="Background" Background="{TemplateBinding Background}" CornerRadius="{Binding (Controls:ControlsHelper.CornerRadius), Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{x:Null}" CornerRadius="{Binding (Controls:ControlsHelper.CornerRadius), Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                            <Border x:Name="DisabledVisualElement" Background="{DynamicResource ControlsDisabledBrush}" CornerRadius="{Binding (Controls:ControlsHelper.CornerRadius), Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" IsHitTestVisible="False" Opacity="0" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                            <Controls:ContentControlEx x:Name="PART_ContentPresenter" ContentCharacterCasing="{Binding (Controls:ControlsHelper.ContentCharacterCasing), RelativeSource={RelativeSource TemplatedParent}}" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" Padding="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="Background" Value="#FF123456"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" TargetName="Background" Value="{DynamicResource GrayBrush7}"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                                <Setter Property="BorderThickness" TargetName="Border" Value="2"/>
+                                <Setter Property="BorderBrush" TargetName="Border" Value="{DynamicResource ButtonMouseOverBorderBrush}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Opacity" TargetName="DisabledVisualElement" Value="0.7"/>
+                                <Setter Property="Opacity" TargetName="PART_ContentPresenter" Value="0.3"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+            <Setter Property="Controls:ControlsHelper.ContentCharacterCasing" Value="Upper"/>
+            <Setter Property="Controls:ControlsHelper.CornerRadius" Value="3"/>
+            <Setter Property="MinHeight" Value="25"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="{DynamicResource UpperCaseContentFontSize}"/>
+            <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}"/>
+            <Setter Property="Background" Value="{DynamicResource GrayBrush10}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource TextBoxBorderBrush}"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+            <Setter Property="Padding" Value="5,6"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Border x:Name="Background" Background="{TemplateBinding Background}" CornerRadius="{Binding (Controls:ControlsHelper.CornerRadius), Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{x:Null}" CornerRadius="{Binding (Controls:ControlsHelper.CornerRadius), Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                            <Border x:Name="DisabledVisualElement" Background="{DynamicResource ControlsDisabledBrush}" CornerRadius="{Binding (Controls:ControlsHelper.CornerRadius), Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" IsHitTestVisible="False" Opacity="0" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                            <Controls:ContentControlEx x:Name="PART_ContentPresenter" ContentCharacterCasing="{Binding (Controls:ControlsHelper.ContentCharacterCasing), RelativeSource={RelativeSource TemplatedParent}}" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" Padding="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Cursor="Hand"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="BorderThickness" Value="1"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" TargetName="Background" Value="{DynamicResource GrayBrush7}"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                                <Setter Property="BorderThickness" TargetName="Border" Value="2"/>
+                                <Setter Property="BorderBrush" TargetName="Border" Value="{DynamicResource ButtonMouseOverBorderBrush}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Opacity" TargetName="DisabledVisualElement" Value="0.7"/>
+                                <Setter Property="Opacity" TargetName="PART_ContentPresenter" Value="0.3"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle2" TargetType="{x:Type Button}">
+            <Setter Property="Controls:ControlsHelper.ContentCharacterCasing" Value="Upper"/>
+            <Setter Property="Controls:ControlsHelper.CornerRadius" Value="3"/>
+            <Setter Property="MinHeight" Value="25"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="{DynamicResource UpperCaseContentFontSize}"/>
+            <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}"/>
+            <Setter Property="Background" Value="{DynamicResource GrayBrush10}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource TextBoxBorderBrush}"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+            <Setter Property="Padding" Value="5,6"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Border x:Name="Background" Background="{TemplateBinding Background}" CornerRadius="{Binding (Controls:ControlsHelper.CornerRadius), Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{x:Null}" CornerRadius="{Binding (Controls:ControlsHelper.CornerRadius), Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                            <Border x:Name="DisabledVisualElement" Background="{DynamicResource ControlsDisabledBrush}" CornerRadius="{Binding (Controls:ControlsHelper.CornerRadius), Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" IsHitTestVisible="False" Opacity="0" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                            <Controls:ContentControlEx x:Name="PART_ContentPresenter" ContentCharacterCasing="{Binding (Controls:ControlsHelper.ContentCharacterCasing), RelativeSource={RelativeSource TemplatedParent}}" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" Padding="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="BorderThickness" TargetName="Background" Value="1"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" TargetName="Background" Value="{DynamicResource GrayBrush7}"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                                <Setter Property="BorderThickness" TargetName="Border" Value="2"/>
+                                <Setter Property="BorderBrush" TargetName="Border" Value="{DynamicResource ButtonMouseOverBorderBrush}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Opacity" TargetName="DisabledVisualElement" Value="0.7"/>
+                                <Setter Property="Opacity" TargetName="PART_ContentPresenter" Value="0.3"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Controls:MetroWindow.Resources>
+
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+
+            <Button  ToolTip="Aidee" Click="MenuItem_Click_2" MouseEnter="helpEnter" MouseLeave="helpLeave">
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Name="imgHelp" Width="20" Height="26"
+                  >
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="interface.png"/>
+                        </Rectangle.Fill>
+
+
+
+                    </Rectangle>
+                    <TextBlock Margin="4 0 0 0"
+                   VerticalAlignment="Center"
+                   Text="Aide" Foreground="White"/>
+                </StackPanel>
+            </Button>
+            <Button Name="about" ToolTip="à propos de nous" Click="about_Click" MouseEnter="aboutEnter" MouseLeave="about_MouseLeave">
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Name="imgAbout" Width="20" Height="20"
+                  >
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="man.png"/>
+                        </Rectangle.Fill>
+
+                    </Rectangle>
+                    <TextBlock Margin="4 0 0 0"
+                   VerticalAlignment="Center"
+                   Text="À propos de nous"  Foreground="White"/>
+                </StackPanel>
+            </Button>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+    <Grid Background="LightGray" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="348*"/>
+            <RowDefinition Height="293*"/>
+        </Grid.RowDefinitions>
+        <StatusBar Margin="-3,35,0,0" Height="33" VerticalAlignment="Top" Background="#123456" >
+
+
+            <Menu RenderTransformOrigin="0.5,0.704" Height="26" VerticalAlignment="Bottom" Foreground="White" Background="{x:Null}" >
+
+
+
+
+
+
+
+
+                <MenuItem Header="Affichage" Height="31">
+                    <MenuItem.Background>
+                        <ImageBrush/>
+                    </MenuItem.Background>
+                    <MenuItem Name="zoom_av" Header="Zoom avant" Click="zoom_av_Click" Foreground="Black"/>
+                    <MenuItem Name="zoom_ar" Header="Zoom arrière" Click="zoom_ar_Click" Foreground="Black"/>
+                </MenuItem>
+                <MenuItem Header="Aide" Height="31">
+                    <MenuItem.Background>
+                        <ImageBrush/>
+                    </MenuItem.Background>
+
+                    <MenuItem  Header="Site web de Easy struct" Click="MenuItem_Click_2" Foreground="Black"/>
+
+                    <MenuItem Header="À propos de nous" Click="about_Click" Foreground="Black"/>
+                    <MenuItem Name="easystruct_about" Header="À propos de Easy Struct"  Foreground="Black" Click="easystruct_about_Click"/>
+                </MenuItem>
+            </Menu>
+        </StatusBar>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.RowSpan="2" Margin="23,73,35,127"   >
+            <Canvas Name="princcanvas" HorizontalAlignment="Left" Height="509" VerticalAlignment="Top" Width="2552" Grid.RowSpan="2"/>
+        </ScrollViewer>
+        <Canvas HorizontalAlignment="Left" Height="523" Margin="-75,255,0,-107" VerticalAlignment="Top" Width="93" Grid.RowSpan="2">
+            <Grid Name="grid1" Height="184" Canvas.Left="-158" Width="226" Background="#123456" Canvas.Top="107">
+                <DockPanel Background="Yellow" Margin="0,0,0,-51" >
+                    <ListBox DockPanel.Dock="Top" Foreground="White" Background="#123456" SelectionChanged="ListBox_SelectionChanged" Cursor="Hand" Height="277" >
+                        <ListBoxItem Name="chargmentalealiste" Height="45" MouseEnter="chargmentalealiste_MouseEnter" MouseLeave="chargmentalealiste_MouseLeave" >
+
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle x:Name="imgchargment" Width="25" Height="25" 
+                  >
+                                    <Rectangle.Fill>
+                                        <ImageBrush ImageSource="Chargement_Initiale.png"/>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <TextBlock Margin="4 0 0 0"
+                   VerticalAlignment="Center"
+                   Text=" Chargement initial" Foreground="White" 
+                                        FontFamily="Tahoma" FontSize="18.6"/>
+
+
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem Height="45" MouseEnter="ListBoxItem_MouseEnter" MouseLeave="ListBoxItem_MouseLeave">
+                            <ListBoxItem.Background>
+                                <ImageBrush/>
+                            </ListBoxItem.Background>
+
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Name="imgRecherch" Width="25" Height="25" 
+                  >
+                                    <Rectangle.Fill>
+                                        <ImageBrush ImageSource="Recherche.png"/>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <TextBlock Margin="4 0 0 0"
+                   VerticalAlignment="Center"
+                   Text=" Recherche de la tete" Foreground="White" 
+                                        FontFamily="Tahoma" FontSize="18.6">
+
+                                </TextBlock>
+
+
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem Height="45" MouseEnter="ListBoxItem_MouseEnter_1" MouseLeave="ListBoxItem_MouseLeave_1" >
+                            <ListBoxItem.Background>
+                                <ImageBrush/>
+                            </ListBoxItem.Background>
+
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Name="imgInsertion" Width="25" Height="25" 
+                  >
+                                    <Rectangle.Fill>
+                                        <ImageBrush ImageSource="Recherche.png"/>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <TextBlock Margin="4 0 0 0"
+                   VerticalAlignment="Center"
+                   Text=" Recherche de la qeue" Foreground="White" 
+                                        FontFamily="Tahoma" FontSize="18.6" >
+
+                                </TextBlock>
+
+
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem Height="45" MouseEnter="ListBoxItem_MouseEnter_2" MouseLeave="ListBoxItem_MouseLeave_2">
+                            <ListBoxItem.Background>
+                                <ImageBrush/>
+                            </ListBoxItem.Background>
+
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Name="imgsuppression" Width="25" Height="25" 
+                  >
+                                    <Rectangle.Fill>
+                                        <ImageBrush ImageSource="Inserer.png"/>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <TextBlock Margin="4 0 0 0"
+                   VerticalAlignment="Center"
+                   Text=" Insertion" Foreground="White" 
+                                        FontFamily="Tahoma" FontSize="18.6"  >
+
+                                </TextBlock>
+
+
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem Height="45" MouseEnter="ListBoxItem_MouseEnter_3" MouseLeave="ListBoxItem_MouseLeave_3" >
+                            <ListBoxItem.Background>
+                                <ImageBrush/>
+                            </ListBoxItem.Background>
+
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Name="imgtriparbulle" Width="25" Height="25" 
+                  >
+                                    <Rectangle.Fill>
+                                        <ImageBrush ImageSource="Supprimer.png"/>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <TextBlock Margin="4 0 0 0"
+                   VerticalAlignment="Center"
+                   Text=" Suppression par val" Foreground="White" 
+                                        FontFamily="Tahoma" FontSize="18.6"   >
+
+                                </TextBlock>
+
+
+                            </StackPanel>
+                        </ListBoxItem>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </ListBox>
+                </DockPanel>
+
+                <Button x:Name="affichermenubutton" Background="#123456" FontFamily="tahoma"  Content="MENU" Foreground="White" HorizontalAlignment="Left" Height="235" Margin="223,0,-35,-51" VerticalAlignment="Top" Width="38"  Padding="0" BorderThickness="0" Click="affichermenubutton_Click" MouseEnter="affichermenubutton_MouseEnter" MouseLeave="affichermenubutton_MouseLeave" Style="{DynamicResource ButtonStyle1}">
+
+
+                </Button>
+
+            </Grid>
+            <Grid Name="grid2" HorizontalAlignment="Left" Height="82" VerticalAlignment="Top" Width="301" Grid.Row="1" Canvas.Top="116" Visibility="Hidden" Canvas.Left="217" >
+
+
+
+                <TextBox x:Name="textboxrecherche" FontSize="24"  Foreground="White" FontFamily="Tahoma" TextAlignment="Center" Cursor="IBeam" Height="45" TextWrapping="Wrap" Text="" VerticalAlignment="Top"  Background="#FF4C6B89" Margin="117,36,91,0" TextChanged="textboxrecherche_TextChanged" KeyDown="textboxrecherche_KeyDown" PreviewTextInput="textboxrecherche_PreviewTextInput"/>
+                <Button x:Name="okrecherche" IsEnabled="False" Content="OK" Foreground="White" FontFamily="tahoma" FontSize="18.8"  HorizontalAlignment="Left" Height="45" Margin="187,36,0,0" VerticalAlignment="Top"  Width="63" Background="#123456" Click="okrecherche_Click"/>
+
+            </Grid>
+            <Grid Name="grid3" HorizontalAlignment="Left"  Height="82" VerticalAlignment="Top" Width="301" Grid.Row="1" Canvas.Top="161" Visibility="Hidden" Canvas.Left="217" >
+
+
+
+                <TextBox x:Name="textBoxinsertion"  Foreground="White" FontSize="24" FontFamily="Tahoma" TextAlignment="Center" Cursor="IBeam" Height="45" TextWrapping="Wrap" Text="" VerticalAlignment="Top"  Background="#FF4C6B89" Margin="117,36,91,0" TextChanged="textBoxinsertion_TextChanged" KeyDown="textBoxinsertion_KeyDown" PreviewTextInput="textBoxinsertion_PreviewTextInput"/>
+                <Button x:Name="buttoninsertion" IsEnabled="False" Content="OK" Foreground="White" FontFamily="tahoma" FontSize="18.8"  HorizontalAlignment="Left" Height="45" Margin="187,36,0,0" VerticalAlignment="Top"  Width="63" Background="#123456" Click="buttoninsertion_Click"/>
+
+            </Grid>
+            <Grid Name="grid4" HorizontalAlignment="Left" Height="82" VerticalAlignment="Top" Width="301" Grid.Row="1" Canvas.Top="206" Visibility="Hidden" Canvas.Left="217">
+                <TextBox x:Name="textBoxsuppression" Foreground="White" FontSize="24" FontFamily="Tahoma" TextAlignment="Center" Cursor="IBeam" Height="45" TextWrapping="Wrap" Text="" VerticalAlignment="Top"  Background="#FF4C6B89" Margin="117,36,91,0" TextChanged="textBoxsuppression_TextChanged" KeyDown="textBoxsuppression_KeyDown" PreviewTextInput="textBoxsuppression_PreviewTextInput"/>
+                <Button x:Name="buttonsuppression" IsEnabled="False" Content="OK" Foreground="White" FontFamily="tahoma" FontSize="18.8"  HorizontalAlignment="Left" Height="45" Margin="187,36,0,0" VerticalAlignment="Top" Width="63" Background="#123456" Click="buttonsuppression_Click"/>
+            </Grid>
+            <Grid Name="grid5" HorizontalAlignment="Left" Height="82" VerticalAlignment="Top" Width="301" Grid.Row="1" Canvas.Top="72" Visibility="Hidden" Canvas.Left="217">
+
+
+
+                <TextBox x:Name="textBchargementalea" Foreground="White" FontSize="24" FontFamily="Tahoma" TextAlignment="Center" Cursor="IBeam" Height="45" TextWrapping="Wrap" Text="" VerticalAlignment="Top"  Background="#FF4C6B89" Margin="117,36,91,0"  TextChanged="textBchargementalea_TextChanged" KeyDown="textBchargementalea_KeyDown" PreviewTextInput="textBchargementalea_PreviewTextInput"/>
+                <Button x:Name="buttonchargementalea" IsEnabled="False" Content="OK" Foreground="White" FontFamily="tahoma" FontSize="18.8"  HorizontalAlignment="Left" Height="45" Margin="187,36,0,0" VerticalAlignment="Top" Width="63" Background="#123456" Click="buttonchargementalea_Click"  />
+
+            </Grid>
+            <Grid Name="grid6" HorizontalAlignment="Left" Height="82" VerticalAlignment="Top" Width="301" Grid.Row="1" Canvas.Top="250" Visibility="Hidden" Canvas.Left="216">
+                <TextBox x:Name="textBoxsuppresionval"  Foreground="White" FontSize="24" FontFamily="Tahoma" TextAlignment="Center" Cursor="IBeam" Height="45" TextWrapping="Wrap" Text="" VerticalAlignment="Top"  Background="#FF4C6B89" Margin="119,36,91,0" KeyDown="suppresionval_KeyDown" TextChanged="suppresionval_TextChanged" PreviewTextInput="textBoxsuppresionval_PreviewTextInput" />
+                <Button x:Name="buttonbulle" IsEnabled="False" Content="OK" Foreground="White" FontFamily="tahoma" FontSize="18.8"  HorizontalAlignment="Left" Height="45" Margin="187,36,0,0" VerticalAlignment="Top" Width="63" Background="#123456" Click="buttonbulle_Click"/>
+            </Grid>
+
+
+        </Canvas>
+
+        <StackPanel HorizontalAlignment="Left" Height="100" Margin="1804,112,-896,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
+        <StatusBar HorizontalAlignment="Left" Height="41" Margin="-3,-6,-25,0" VerticalAlignment="Top" Width="1336" Background="#123456">
+
+        </StatusBar>
+
+        <Grid HorizontalAlignment="Left" Height="72" Margin="351,252,0,-17" Grid.Row="1" VerticalAlignment="Top" Width="454" Background="#FF222222"/>
+
+
+        <Button x:Name="zoumavant" Content="+" HorizontalAlignment="Left" FontSize="35" Background="#123456" Foreground="White" FontFamily="tahoma" Height="42" VerticalAlignment="Top" Width="69" Margin="642,257,0,0" Grid.Row="1" ToolTip="zoom avant" Style="{DynamicResource zoom1}" Click="zoumavant_Click">
+
+        </Button>
+
+        <Button x:Name="zoumarriere" Content="-" HorizontalAlignment="Left" FontSize="55" Background="#123456" Foreground="White" FontFamily="tahoma" Height="42" VerticalAlignment="Top" Width="69" Margin="716,257,0,0" Grid.Row="1" ToolTip="zoom arrière" Click="zoumarriere_Click"/>
+        <Slider x:Name="slider" HorizontalAlignment="Left" Height="25" Maximum="5" Minimum="0"  VerticalAlignment="Top" Width="188"  Background="{x:Null}" Grid.Row="1" Margin="376,270,0,0" ValueChanged="slider_ValueChanged"/>
+        <TextBlock x:Name="textslider" Foreground="White" HorizontalAlignment="Left" Margin="407,285,0,-17" Grid.Row="1" TextWrapping="Wrap" Text=""  Width="166" FontFamily="tahoma" FontSize="18" />
+
+        <Canvas HorizontalAlignment="Left" Height="545" Margin="1273,255,0,-129" Grid.RowSpan="2" VerticalAlignment="Top" Width="33">
+            <Grid Name="gridalgo" Height="321" Canvas.Left="30" Canvas.Top="94" Background="#1abc9c" Width="348">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="215*"/>
+                    <RowDefinition Height="38*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="15*"/>
+                    <ColumnDefinition Width="311*"/>
+                </Grid.ColumnDefinitions>
+                <Canvas Name="algocanvas" HorizontalAlignment="Left" Height="271" Margin="0,10,0,-28" VerticalAlignment="Top" Width="283" Grid.Column="1" Grid.RowSpan="2"/>
+                <Button x:Name="afficheralgobutton" Background="#1abc9c" FontFamily="tahoma"  Content="algo" Foreground="White" HorizontalAlignment="Left" Height="321" VerticalAlignment="Top" Width="39"  Padding="0" BorderThickness="0" Margin="-23,0,0,0" Grid.RowSpan="2" Click="afficheralgobutton_Click" Style="{DynamicResource ButtonStyle2}" MouseEnter="afficheralgobutton_MouseEnter" MouseLeave="afficheralgobutton_MouseLeave" />
+            </Grid>
+        </Canvas>
+
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+</Controls:MetroWindow>

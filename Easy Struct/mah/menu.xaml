@@ -1,0 +1,246 @@
+﻿<Controls:MetroWindow
+    x:Class="mah.menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    
+        xmlns:local="clr-namespace:mah"
+      GlowBrush="{DynamicResource AccentColorBrush}"
+                      EnableDWMDropShadow="True"
+                      ShowTitleBar="False"
+                      WindowStartupLocation="CenterScreen" 
+                      BorderThickness="0" 
+                      ResizeMode="CanMinimize" 
+                      Title="Aide et Conseils"
+                      Height="301"
+                      Width="312" WindowStyle="None" Cursor="Pen"
+       >
+    <Grid Margin="0,0,-6,-29" Cursor="Pen">
+
+        <Controls:FlipView 
+                   IsBannerEnabled="False" MouseOverGlowEnabled="False" 
+                   
+                   Margin="-6,-6,0,25" Cursor="Pen"
+             >
+            <Controls:FlipView.Items>
+
+                <Grid Background="#BF1E4B">
+
+
+                    <TextBlock Text="Tableau!" Foreground="White" Margin="39,10,61,100" TextAlignment="Center" FontStyle="Italic" FontSize="50" TextDecorations="{x:Null}" >
+                        <TextBlock.Effect>
+                            <DropShadowEffect/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                    <Grid Margin="29,192,48,0">
+                        <Controls:FlipView 
+                   IsBannerEnabled="False" MouseOverGlowEnabled="False" 
+                   
+                   Margin="-6,40,0,-37"
+             >
+                            <Controls:FlipView.Items>
+                                <Grid>
+                                    <TextBlock Text="Trie" Foreground="White" TextAlignment="Center" FontStyle="Italic" FontSize="35" TextDecorations="{x:Null}" Margin="10,-10,22,10" >
+                                        <TextBlock.Effect>
+                                            <DropShadowEffect/>
+                                        </TextBlock.Effect>
+                                    </TextBlock>
+                                    <Button x:Name="button" Content="similation" Foreground="White"  HorizontalAlignment="Left" Height="9" Margin="81,38,0,0" VerticalAlignment="Top" Width="69" Background="#FF2F2F2F" IsCancel="True" Cursor="Hand" Click="button_Click" >
+                                        <Button.BindingGroup>
+                                            <BindingGroup/>
+                                        </Button.BindingGroup>
+                                        <Button.BorderBrush>
+                                            <ImageBrush/>
+                                        </Button.BorderBrush>
+                                    </Button>
+                                </Grid>
+                                <Grid>
+                                    <TextBlock Text="Non-Trie" Foreground="White" TextAlignment="Center" FontStyle="Italic" FontSize="35" TextDecorations="{x:Null}" Margin="28,-10,22,10" >
+                                        <TextBlock.Effect>
+                                            <DropShadowEffect/>
+                                        </TextBlock.Effect>
+                                    </TextBlock>
+                                    <Button x:Name="button1" Content="similation" Foreground="White"  HorizontalAlignment="Left" Height="9" Margin="81,38,0,0" VerticalAlignment="Top" Width="69" Background="#FF2F2F2F" IsCancel="True" Cursor="Hand" >
+                                        <Button.BindingGroup>
+                                            <BindingGroup/>
+                                        </Button.BindingGroup>
+                                        <Button.BorderBrush>
+                                            <ImageBrush/>
+                                        </Button.BorderBrush>
+                                    </Button>
+                                </Grid>
+                            </Controls:FlipView.Items>
+                        </Controls:FlipView>
+                    </Grid>
+
+                </Grid>
+                <Grid Background="#2E8DEF">
+
+                    <TextBlock Text="Listes!" Foreground="White" Margin="39,10,61,100" TextAlignment="Center" FontStyle="Italic" FontSize="50" TextDecorations="{x:Null}" >
+                        <TextBlock.Effect>
+                            <DropShadowEffect/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                    <Grid Margin="29,192,48,0">
+                        <Controls:FlipView 
+                   IsBannerEnabled="False" MouseOverGlowEnabled="False" 
+                   
+                   Margin="-6,40,0,-37"
+             >
+                            <Controls:FlipView.Items>
+                                <Grid>
+                                    <TextBlock Text="Chainé" Foreground="White" TextAlignment="Center" FontStyle="Italic" FontSize="35" TextDecorations="{x:Null}" Margin="10,-10,22,10" >
+                                        <TextBlock.Effect>
+                                            <DropShadowEffect/>
+                                        </TextBlock.Effect>
+                                    </TextBlock>
+                                    <Button x:Name="button2" Content="similation" Foreground="White"  HorizontalAlignment="Left" Height="9" Margin="81,38,0,0" VerticalAlignment="Top" Width="69" Background="#FF2F2F2F" IsCancel="True" Cursor="Hand" >
+                                        <Button.BindingGroup>
+                                            <BindingGroup/>
+                                        </Button.BindingGroup>
+                                        <Button.BorderBrush>
+                                            <ImageBrush/>
+                                        </Button.BorderBrush>
+                                    </Button>
+                                </Grid>
+                                <Grid>
+                                    <TextBlock Text="B-direction" Foreground="White" TextAlignment="Center" FontStyle="Italic" FontSize="35" TextDecorations="{x:Null}" Margin="38,-10,22,10" >
+                                        <TextBlock.Effect>
+                                            <DropShadowEffect/>
+                                        </TextBlock.Effect>
+                                    </TextBlock>
+                                    <Button x:Name="button3" Content="similation" Foreground="White"  HorizontalAlignment="Left" Height="9" Margin="81,38,0,0" VerticalAlignment="Top" Width="69" Background="#FF2F2F2F" IsCancel="True" Cursor="Hand" >
+                                        <Button.BindingGroup>
+                                            <BindingGroup/>
+                                        </Button.BindingGroup>
+                                        <Button.BorderBrush>
+                                            <ImageBrush/>
+                                        </Button.BorderBrush>
+                                    </Button>
+                                </Grid>
+                            </Controls:FlipView.Items>
+                        </Controls:FlipView>
+                    </Grid>
+
+
+
+                </Grid>
+                <Grid Background="#00A600">
+
+
+                    <TextBlock Text="Arbres!" Foreground="White" Margin="39,10,61,100" TextAlignment="Center" FontStyle="Italic" FontSize="48" TextDecorations="{x:Null}" >
+                        <TextBlock.Effect>
+                            <DropShadowEffect/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                    <Grid Margin="29,192,48,0">
+                        <Controls:FlipView 
+                   IsBannerEnabled="False" MouseOverGlowEnabled="False" 
+                   
+                   Margin="-6,40,0,-37"
+             >
+                            <Controls:FlipView.Items>
+                                <Grid>
+                                    <TextBlock Text="Binnaire" Foreground="White" TextAlignment="Center" FontStyle="Italic" FontSize="35" TextDecorations="{x:Null}" Margin="10,-10,22,10" >
+                                        <TextBlock.Effect>
+                                            <DropShadowEffect/>
+                                        </TextBlock.Effect>
+                                    </TextBlock>
+                                    <Button x:Name="button4" Content="similation" Foreground="White"  HorizontalAlignment="Left" Height="9" Margin="81,38,0,0" VerticalAlignment="Top" Width="69" Background="#FF2F2F2F" IsCancel="True" Cursor="Hand" >
+                                        <Button.BindingGroup>
+                                            <BindingGroup/>
+                                        </Button.BindingGroup>
+                                        <Button.BorderBrush>
+                                            <ImageBrush/>
+                                        </Button.BorderBrush>
+                                    </Button>
+                                </Grid>
+                                <Grid>
+                                    <TextBlock Text="AVL" Foreground="White" TextAlignment="Center" FontStyle="Italic" FontSize="35" TextDecorations="{x:Null}" Margin="38,-10,22,10" >
+                                        <TextBlock.Effect>
+                                            <DropShadowEffect/>
+                                        </TextBlock.Effect>
+                                    </TextBlock>
+                                    <Button x:Name="button5" Content="similation" Foreground="White"  HorizontalAlignment="Left" Height="9" Margin="81,38,0,0" VerticalAlignment="Top" Width="69" Background="#FF2F2F2F" IsCancel="True" Cursor="Hand" >
+                                        <Button.BindingGroup>
+                                            <BindingGroup/>
+                                        </Button.BindingGroup>
+                                        <Button.BorderBrush>
+                                            <ImageBrush/>
+                                        </Button.BorderBrush>
+                                    </Button>
+                                </Grid>
+                            </Controls:FlipView.Items>
+                        </Controls:FlipView>
+                    </Grid>
+
+
+
+
+
+
+
+
+                </Grid>
+                <Grid Background="Gold">
+
+                    <TextBlock Text="Pile!" Foreground="White" Margin="39,10,61,100" TextAlignment="Center" FontStyle="Italic" FontSize="50" TextDecorations="{x:Null}" >
+                        <TextBlock.Effect>
+                            <DropShadowEffect/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                    <Grid Margin="29,192,48,0">
+                        <Button x:Name="button6" Content="similation" Foreground="White"  HorizontalAlignment="Left" Height="9" Margin="81,68,0,0" VerticalAlignment="Top" Width="69" Background="#FF2F2F2F" IsCancel="True" Cursor="Hand" >
+                        <Button.BindingGroup>
+                            <BindingGroup/>
+                        </Button.BindingGroup>
+                        <Button.BorderBrush>
+                            <ImageBrush/>
+                        </Button.BorderBrush>
+                        </Button>
+                    </Grid>
+                </Grid>
+                <Grid Background="Sienna">
+
+                    <TextBlock Text="File!" Foreground="White" Margin="39,10,61,100" TextAlignment="Center" FontStyle="Italic" FontSize="50" TextDecorations="{x:Null}" >
+                        <TextBlock.Effect>
+                            <DropShadowEffect/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                    <Grid Margin="29,192,48,0">
+                        <Button x:Name="button7" Content="similation" Foreground="White"  HorizontalAlignment="Left" Height="9" Margin="81,68,0,0" VerticalAlignment="Top" Width="69" Background="#FF2F2F2F" IsCancel="True" Cursor="Hand" >
+                        <Button.BindingGroup>
+                            <BindingGroup/>
+                        </Button.BindingGroup>
+                        <Button.BorderBrush>
+                            <ImageBrush/>
+                        </Button.BorderBrush>
+                        </Button>
+                    </Grid>
+                </Grid>
+                <Grid Background="Silver">
+
+                    <TextBlock Text="Matrices!" Foreground="White" Margin="39,10,61,100" TextAlignment="Center" FontStyle="Italic" FontSize="50" TextDecorations="{x:Null}" >
+                        <TextBlock.Effect>
+                            <DropShadowEffect/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                    <Grid Margin="29,192,48,0">
+                    <Button x:Name="button8" Content="similation" Foreground="White"  HorizontalAlignment="Left" Height="9" Margin="81,68,0,0" VerticalAlignment="Top" Width="69" Background="#FF2F2F2F" IsCancel="True" Cursor="Hand" >
+                        <Button.BindingGroup>
+                            <BindingGroup/>
+                        </Button.BindingGroup>
+                        <Button.BorderBrush>
+                            <ImageBrush/>
+                        </Button.BorderBrush>
+                    </Button>
+                </Grid>
+                </Grid>
+
+            </Controls:FlipView.Items>
+        </Controls:FlipView>
+
+    </Grid>
+</Controls:MetroWindow>

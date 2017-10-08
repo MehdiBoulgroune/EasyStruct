@@ -1,0 +1,389 @@
+﻿
+
+<!DOCTYPE html PUBLIC ">
+        <html>
+        <head>
+
+
+    <meta charset="utf-8" />   
+    <script src="js/jquery-1.12.3.min.js"></script>
+         <link rel="stylesheet" href="style2.css" />  
+         <link rel=icon href=signs.png sizes="57x57" type="image/png">
+
+
+          
+        <title> EASY STRUCT</title>
+        
+
+         
+    </head>
+
+
+
+    <body>
+
+    <div class="Bare_etat">
+       
+        
+        
+
+              <div class="navigation " style="position: absolute;" >
+                       <a class="LienMenu" id="MenuPricipale">Notre équipe</a>
+                        
+                        <div class="logo" style="width: 220px; height: 230px; margin: auto; padding-top:10px;  ">  <img src="logo.png" > </div>
+                       <a class="LienLogin" id="buttonn">Contactez nous</a>
+              </div>
+
+
+<div class="Menu2" id="Pagelogin" >
+
+<a class="LienMenu" id="Quitterlogin"> Quitter</a>
+
+
+   <div class="fenetre_login" style="margin-top: 100px; ">
+        
+
+         <h1 style="text-align: center; color:white;">Nous contacter</h1>
+          <form <form method="post" action="i ndex.php">
+
+            <p>  <input type="text" placeholder=" Nom" name="maill" class="formIndex" />  </p>
+            <p>  <input type="text" placeholder=" Prenom" name="maill" class="formIndex" />  </p>
+            <p>  <input type="text" placeholder=" E-mail" name="maill" class="formIndex" />  </p>
+            <p>  <input type="text" placeholder=" Message"  name="maill" class="formIndex" style="width: 400px; height: 150px;" />  </p> 
+            <p style="margin:auto; width: 100px; ">  <input type="submit" value="submit" class="Index1_bouttonCommencez" style="width: 80px; height: 50px; color: blue;"></p>
+
+          </form>
+
+        </div>
+
+</div>
+
+
+       <div class="Menu2" id="PageMenu">
+
+        <a class="LienMenu" id="QuitterMenu"> Quitter</a>
+        <h1 style="width: 150px; margin: auto; font-family: arial; padding-top: 20px; color: white;">équipe 7</h1>
+
+        <div style="min-width: 300px; max-width: 750px ; height: 500px; margin: auto; margin-top: 50px;">
+          
+          <div class="article1">
+                <img src="img/mehdi.jpg" width="100%" />
+                <h3>BOULGROUNE Mehdi Ismail</h3>           
+            </div><!-- .article -->
+
+            <div class="article1">
+                <img src="img/ihab.jpg" width="100%" />
+                <h3>IMAD Ihab Eddine</h3>           
+            </div><!-- .article -->
+
+            <div class="article1">
+                <img src="img/anis.jpg" width="100%" />
+                <h3>AMAR Anis Zoubir</h3>           
+            </div><!-- .article -->
+
+             <div class="article1">
+                <img src="img/isra.jpg" width="100%" />
+                <h3>MEKKI Isra Ilham</h3>           
+            </div><!-- .article -->
+
+             <div class="article1">
+                <img src="img/doria.jpg" width="100%" />
+                <h3>RELIZANI Doria</h3>           
+            </div><!-- .article -->
+
+             <div class="article1">
+                <img src="img/melila.jpg" width="100%" />
+                <h3>BOUAM Mellila</h3>           
+            </div><!-- .article -->
+
+        </div>
+        
+
+      </div>
+
+
+</div> <!-- bar d'etat -->
+
+<script type="text/javascript">
+
+      var i=0.0;
+      
+      var Menupricipale=document.getElementById('MenuPricipale');
+      var PageMenu=document.getElementById('PageMenu');
+      var a=false;
+
+      Menupricipale.addEventListener('click',Interval,false);
+      QuitterMenu.addEventListener('click',SupprimerMenu,false);
+      
+      var j=0.0;
+      var Buttonn=document.getElementById('buttonn');
+      var Pagelogin=document.getElementById('Pagelogin');
+      var s=false;
+
+      Buttonn.addEventListener('click',Interval0,false);
+      Quitterlogin.addEventListener('click',SupprimerMenu0,false);
+
+
+
+
+      
+      
+      function Interval2 ()
+          {
+
+          if (!a)
+          {
+                a=true;
+                PageMenu.style.display='block';
+                PageMenu.style.opacity=0;
+          }
+          else
+          {
+                if (i<1.1)
+                {
+                  PageMenu.style.opacity=i;
+                  i+=0.01;
+                }
+                else
+                { clearInterval(b);}
+            
+          }
+        }
+
+     function  Interval() 
+    {
+      b=setInterval(Interval2,7);
+      a=false;
+      i=0.0;
+    }
+
+    function SupprimerMenu ()
+    {
+      PageMenu.style.display='none';
+    }
+
+
+
+
+
+
+      function Interval20 ()
+          {
+
+          if (!s)
+          {
+                s=true;
+                Pagelogin.style.display='block';
+                Pagelogin.style.opacity=0;
+          }
+          else
+          {
+                if (j<1.1)
+                {
+                  Pagelogin.style.opacity=j;
+                  j+=0.01;
+                }
+                else
+                { clearInterval(b);}
+            
+          }
+        }
+
+     function  Interval0() 
+    {
+      b=setInterval(Interval20,7);
+      s=false;
+      j=0.0;
+    }
+  function SupprimerMenu0 ()
+  {
+    Pagelogin.style.display='none';
+  }
+     
+
+      </script>    
+
+    
+
+
+       <div id="menu" class="Menu" style="padding-top: 160px;">
+
+            <a href="javascript:;" class="close"></a>
+        <ul>
+            
+            <li><a href="./menu/installation.html" id="MenuFHC">Démarrer</a></li>
+            <li><a href="./menu/installation.html" id="MenuBac">Installation</a></li>
+            <li><a href="./menu/utilisation.html" id="MenuEsi">Utilisation</a></li>
+                 
+        </ul>
+
+      
+   </div>
+  
+
+         <div id="page" class="Page" style="margin-left:0px width : 1200px; margin-top: 100px;" >
+              <a href="javascript:;" class="menu_btn"></a>
+
+               <div style="height:20px"></div>
+
+              
+
+                <p style="height: 100px ; width: 350px; margin: auto; color: black ; font-size: 48px; font-style: bold;">EASY STRUCT</p>
+
+               
+                 <div style="width: 100%;  ">
+
+               <div style="display: inline-block;  width: 750px;"> <img src="macbook.png" style="height: 70%; width: 100%;"> </div> 
+                
+               <div style="display: inline-block; border-left: 4px rgb(251,206,82) solid; width: 350px; vertical-align: top; margin-top: 100px;"> 
+
+                <p style="width: 510px; margin: auto; font-size: 28px; padding-left: 20px; font-family: arial; margin-bottom: 30px; max-width: 350px;"> Projet deuxième année CPI <br/> <br/> Simulation visuelle</p>
+               <p style=" background-color: rgb(251,206,82); color: white; padding: 10px; border-radius: 30px; font-size: 20px; text-align: center; margin: auto; width: 220px; cursor:pointer;" > <a href="" > Telechargez ici </a></p>
+
+
+               </div>
+
+               </div>
+
+
+               <h1 style="border-bottom : 1px blue solid ; font-size:22px; font-family:arial ; color : red; "> Aide en ligne</h1>
+               <br/>  
+
+                <p style="width: 150px; margin: auto; font-size: 40px; border-left: 2px red solid ;padding-left: 10px; font-family: arial; margin-bottom: 20px;">PROJET </p>
+               
+               
+            
+
+               <p style="width: 510px; margin: auto; font-size: 28px; border-left: 2px red solid;padding-left: 10px; font-family: arial; margin-bottom: 30px;">Outil d’aide à la simulation visuelle de fonctionnement d’opérations de manipulation des structures de données statiques et dynamiques.</p>
+
+
+
+               <div id="articles" style="margin-bottom: 100px; width: 750px; margin : auto;">
+               <div id="arb" style="width: 720px; height: 350px;  position: absolute; display: none; background-color: rgba(1,5,158,0.9) ;border-radius :10px; ">
+                 <h1 style="color: white; "> Les arbres binaires :</h1>
+                 <p style="padding: 30px; font-size: 20px; color: white;">Un arbre binaire est une structure de données dynamique qui permet de stocker un nombre variable d’éléments de même type dans des nœuds, les éléments y sont représentés sous une hiérarchie ressemblant à celle  d’un arbre où le nœud initial est appelé racine de l’arbre  et où chaque élément   possède au plus deux éléments fils au niveau inférieur. Parmi les opérations possibles sur un arbre binaire on peut trouver les suivantes : recherche, insertion, suppression, différents parcours (préordre, inordre, postordre)…</p>
+               </div>
+         
+              <div class="article" id="arb1">
+                <img src="img/Arbre.gif" width="100%" />
+                <h3>Arbres binaires</h3>           
+            </div><!-- .article -->
+          
+          <div id="file" style="width: 720px; height: 350px;  position: absolute; display: none; background-color: rgba(100,5,158,0.9) ;border-radius :10px; ">
+                 <h1 style="color: white;"> Les files : </h1>
+                 <p style="padding: 30px; font-size: 20px; color: white;">Une file d’attente est une structure de données dynamique basée sur le principe dit  FIFO (First In First Out) autrement dit : les premiers éléments ajoutés à la file seront les premiers à être récupérés illustrant le principe d’une file d’attente où les premières personnes arrivées dans la file sont les premières personnes à en sortir. Comme opérations de base sur une file, on trouve les opérations d’enfilement et de défilement.</p>
+               </div>
+
+            <div class="article" id="file1">
+                <img src="img/File.gif" width="100%" />
+                <h3>File</h3>           
+
+            </div><!-- .article -->
+
+              <div id="pile" style="width: 720px; height: 350px;  position: absolute; display: none; background-color: rgba(70,50,158,0.9) ;border-radius :10px; ">
+                 <h1 style="color: white;"> Les piles : </h1>
+                 <p style="padding: 30px; font-size: 20px; color: white;">Une pile est une structure de données dynamique basée sur le principe dit  LIFO (Last In First Out) autrement dit : les derniers éléments ajoutés à la pile seront les premiers à être récupérés illustrant le principe d’une pile d’éléments quel qu’en que  où les derniers à être ajoutés sur la pile sont les premiers à être récupérés. Comme opérations de base sur une pile, on trouve les opérations d’empilement et de dépilement</p>
+               </div>
+
+              <div class="article" id="pile1">
+                <img src="img/Pile.gif" width="100%" />
+                <h3>Pile</h3>           
+            </div><!-- .article -->
+
+              <div id="liste" style="width: 720px; height: 350px;  position: absolute; display: none; background-color: rgba(120,57,12,0.9) ;border-radius :10px; ">
+                 <h1 style="color: white;"> Les listes linéaires chainées :</h1>
+                 <p style="padding: 30px; font-size: 20px; color: white;">Une LLC est une structure de données dynamique  qui permet de stocker un nombre variable d’éléments de même type et ou chaque élément est repéré par un indice et pointe sur son suivant dans la liste. La liste linéaire chainée est dite triée si les éléments qu’elle contient sont ordonnés, non triée sinon. Selon qu’elle soit triée ou non, on distingue différentes opérations possibles sur une liste linéaire chainée : - Liste triée : chargement initial, recherche dichotomique, insertion (par valeur/par position), suppression (par valeur/par position)… - Liste non triée : chargement initial, recherche séquentielle (par valeur/par position), insertion (par valeur/par position), suppression (par valeur/par position), différents tris… </p>
+               </div>
+
+              <div class="article" id="liste1">
+                <img src="img/Liste.gif" width="100%" />
+                <h3>Liste linéaire chainée</h3>           
+            </div><!-- .article -->
+
+              <div id="matrice" style="width: 720px; height: 350px;  position: absolute; display: none; background-color: rgba(100,58,58,0.9) ;border-radius :10px; ">
+                 <h1 style="color: white;"> Les matrices (tableaux bidimensionnels) : </h1>
+                 <p style="padding: 30px; font-size: 20px; color: white;">Une matrice est un tableau à deux dimensions. Parmi les opérations possibles sur les éléments d’une matrice on peut trouver les suivantes : chargement initial, recherche d’un élément,  produit matriciel, transposition et calcul du déterminant. </p>
+               </div>
+
+            <div class="article" id="matrice1">
+                <img src="img/Matrice.gif" width="100%" />
+                <h3>Matrice</h3>           
+            </div><!-- .article -->
+
+             <div id="tableau" style="width: 720px; height: 350px;  position: absolute; display: none; background-color: rgba(100,45,108,0.9) ;border-radius :10px; ">
+                 <h1 style="color: white;"> Les tableaux (unidimensionnels) :  </h1>
+                 <p style="padding: 30px; font-size: 20px; color: white;">Un tableau est une structure de données statique qui permet de stocker un nombre fixé d’éléments de même type et où chaque élément est repéré par un indice. Le tableau est dit trié si les éléments qu’il contient sont ordonnés, non trié sinon. Selon qu’il soit trié ou non, on distingue différentes opérations possibles sur un tableau : - Tableau trié : chargement initial, recherche dichotomique, insertion, suppression. - Tableau non trié : chargement initial, recherche séquentielle, différents tris (tri par transposition, tri par insertion, tri bulles...)  </p>
+               </div>
+	
+              <div class="article" id="tableau1">
+                <img src="img/Tableau.gif" width="100%" />
+                <h3>Tableau</h3>           
+            </div><!-- .article -->
+            
+            </div>
+                  
+              
+
+
+        </div>
+    
+
+
+
+
+    <script type="text/javascript">
+
+
+
+  document.getElementById('arb1').onmouseover=function() {document.getElementById('arb').style.display="block";};
+  document.getElementById('arb1').onmouseleave=function() {document.getElementById('arb').style.display="none";};
+  document.getElementById('arb').onmouseover=function() {document.getElementById('arb').style.display="block";};
+  document.getElementById('arb').onmouseleave=function() {document.getElementById('arb').style.display="none";};
+
+
+  document.getElementById('file1').onmouseover=function() {document.getElementById('file').style.display="block";};
+  document.getElementById('file1').onmouseleave=function() {document.getElementById('file').style.display="none";};
+  document.getElementById('file').onmouseover=function() {document.getElementById('file').style.display="block";};
+  document.getElementById('file').onmouseleave=function() {document.getElementById('file').style.display="none";};
+
+  document.getElementById('pile1').onmouseover=function() {document.getElementById('pile').style.display="block";};
+  document.getElementById('pile1').onmouseleave=function() {document.getElementById('pile').style.display="none";};
+  document.getElementById('pile').onmouseover=function() {document.getElementById('pile').style.display="block";};
+  document.getElementById('pile').onmouseleave=function() {document.getElementById('pile').style.display="none";};
+
+  document.getElementById('liste1').onmouseover=function() {document.getElementById('liste').style.display="block";};
+  document.getElementById('liste1').onmouseleave=function() {document.getElementById('liste').style.display="none";};
+  document.getElementById('liste').onmouseover=function() {document.getElementById('liste').style.display="block";};
+  document.getElementById('liste').onmouseleave=function() {document.getElementById('liste').style.display="none";};
+
+  document.getElementById('matrice1').onmouseover=function() {document.getElementById('matrice').style.display="block";};
+  document.getElementById('matrice1').onmouseleave=function() {document.getElementById('matrice').style.display="none";};
+  document.getElementById('matrice').onmouseover=function() {document.getElementById('matrice').style.display="block";};
+  document.getElementById('matrice').onmouseleave=function() {document.getElementById('matrice').style.display="none";};
+
+  document.getElementById('tableau1').onmouseover=function() {document.getElementById('tableau').style.display="block";};
+  document.getElementById('tableau1').onmouseleave=function() {document.getElementById('tableau').style.display="none";};
+  document.getElementById('tableau').onmouseover=function() {document.getElementById('tableau').style.display="block";};
+  document.getElementById('tableau').onmouseleave=function() {document.getElementById('tableau').style.display="none";};
+
+
+
+  
+    
+  </script>
+    
+
+    
+    
+   <!-- scripts -->
+   
+   <script type="text/javascript" src="js/site.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>

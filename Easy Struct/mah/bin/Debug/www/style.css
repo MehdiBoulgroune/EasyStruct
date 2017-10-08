@@ -1,0 +1,275 @@
+body
+{
+   width: 100%;
+   padding: 0;
+   margin: 0;
+   font-family: 'Open Sans', sans-serif;
+}
+
+a
+{
+	text-decoration: none;
+	color: blue;
+}
+
+ .index__1page
+ {  
+   
+
+ 	
+    width: 100%;
+    height: 100%;
+    background-image: url("Couleur__index__1page.jpg");
+    background-repeat: no-repeat;
+    background-position: -450px 0px;
+ 	
+  }
+
+  .navigation
+ {
+   display: block;
+   width: 100%;
+   height: 100px;
+   
+   
+ }
+
+.LienMenu
+  {
+  	float: left;
+  	font-size: 18px;
+  	font-family: arial;
+  	color: white;
+  	text-decoration :none;
+  	margin-left: 50px;
+    margin-top: 50px;
+    cursor: pointer;
+
+
+  }
+.LienMenu:hover
+  {
+  	color: rgb(192,192,192);
+  }
+
+.LienLogin
+  {
+  	position: absolute;
+    top: 0px;
+    right: 50px;
+  	font-size: 18px;
+  	font-family: arial ;
+  	color: white;
+  	text-decoration :none;
+  	margin-right: 50px;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+
+.LienLogin:hover
+  {
+  	color: rgb(192,192,192);
+  }
+
+
+.contenu
+{ 
+
+  display: block;
+  width: 930px;
+  margin: auto ;
+  overflow: hidden;
+  padding-bottom: 92px;
+  margin-top :50px; 
+  
+}
+
+
+
+.Introduction
+  {
+    display: inline-block;
+  	max-width: 400px;
+    margin-top: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 30px;
+    vertical-align: top;
+
+    
+
+  }
+
+
+.Introduction h1
+ {
+ 	color: white ;
+ 	font-family: cursive;
+ 	font-size: 36px;
+
+ }
+ .Introduction p
+ {
+ 	color: white ;
+ 	font-family: arial;
+ 	font-size: 20px;
+
+ }
+
+.fenetre_inscription
+{ 
+  display: inline-block;
+  border-radius: 2px;
+  max-width: 400px;
+  height: 450px;
+  background-color: rgba(255,255,255,0.6);
+  
+ 
+ 
+}
+
+
+
+.fenetre_inscription_titre
+{   
+  text-align: center; 
+ 	
+ 	font-size: 28px; 
+
+
+}
+form p
+{   
+	padding-bottom: 13px;
+	width: 65%;
+	margin: auto;
+
+}
+.formIndex
+{
+	width: 100%;
+	height: 40px;
+	font-size: 22px;
+  border: 1px grey solid;
+}
+
+.formIndex:focus
+{
+
+  border: 1px blue solid;
+}
+
+.Index1_bouttonCommencez
+{
+	display: block;
+	background-color: blue;
+	color: white;
+	padding: 10px; border-radius: 30px; font-size: 20px; text-align: center; margin: auto; width: 200px; cursor:pointer;
+
+}
+
+.condition
+{ 
+	margin-top: 30px;
+	padding-left: 40px;
+	
+}
+.MessageErreur
+{
+  display: block;
+  padding-bottom: 10px;
+	color: red;
+	font-size: 13px;
+	width:60%;
+  margin: auto;
+	
+ 
+}
+
+
+
+.Menu 
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 800px;
+  z-index: 999;
+  background-color: rgb(41,144,234);
+  display: none;
+  opacity: 0;
+  
+  
+}
+
+.LogPage 
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: rgb(233,234,237);
+  display: none;
+  opacity: 0;
+  
+  
+}
+
+img
+{
+  width: 220px;
+  height: 100px;
+}
+.logo
+{
+  
+  display: block;
+  max-width: 250px;
+  margin: auto;
+  padding-top: 40px;
+
+}
+
+.fenetre_login
+{
+
+  display: block;
+  max-width:400px;
+  margin: auto; 
+  border-left: 4px blue solid;
+}
+
+
+
+@media (max-width : 930px) {
+  .contenu
+  {
+   width: 100%;
+  }
+
+  .Introduction, .fenetre_inscription
+  {
+    display: block;
+    max-width: 400px;
+    margin: auto;
+
+  }
+  .fenetre_inscription_titre
+  {
+  padding-top: 20px;
+  }
+
+
+}
+
+
+
+.description:hover
+{
+  
+}
